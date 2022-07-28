@@ -1,0 +1,8 @@
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\bin\Debug\ExtraerLIVERDED.exe.config
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\bin\Debug\ExtraerLIVERDED.exe
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\bin\Debug\ExtraerLIVERDED.pdb
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\obj\Debug\ExtraerLIVERDED.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\obj\Debug\ExtraerLIVERDED.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\obj\Debug\ExtraerLIVERDED.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\obj\Debug\ExtraerLIVERDED.exe
+C:\Users\Lenovo\source\repos\ExtraerLIVERDED\ExtraerLIVERDED\obj\Debug\ExtraerLIVERDED.pdb

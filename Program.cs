@@ -27,6 +27,7 @@ namespace ExtraerLIVERDED.Models
             
             string[] values;
             DataTable tbl = new DataTable();
+            //DirectoryInfo di24 = new DirectoryInfo(@"\\10.223.208.41\Users\Administrator\Documents\LIVERDED");
             DirectoryInfo di24 = new DirectoryInfo(@"C:\Administración\Proyecto LIVERDED\Ordenes");
             FileInfo[] files24 = di24.GetFiles("*.dat");
 
@@ -35,6 +36,7 @@ namespace ExtraerLIVERDED.Models
             {
                 foreach (var item in files24)
                 {
+                    //string sourceFile = @"\\10.223.208.41\Users\Administrator\Documents\LIVERDED\" + item.Name;
                     string sourceFile = @"C:\Administración\Proyecto LIVERDED\Ordenes\" + item.Name;
                     string Ai_orden = item.Name.Replace(".dat","");
                     string Av_weightunit = "KGM";
@@ -73,6 +75,7 @@ namespace ExtraerLIVERDED.Models
                         }
                         counter++;
                     }
+                    //string destinationFile = @"\\10.223.208.41\Users\Administrator\Documents\LIVERDEDUPLOADS\" + item.Name;
                     string destinationFile = @"C:\Administración\Proyecto LIVERDED\Procesadas\" + item.Name;
                     System.IO.File.Move(sourceFile, destinationFile);
                 }

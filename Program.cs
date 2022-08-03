@@ -27,7 +27,7 @@ namespace ExtraerLIVERDED.Models
             
             string[] values;
             DataTable tbl = new DataTable();
-            DirectoryInfo di24 = new DirectoryInfo(@"C:\Administración\Proyecto PISA\ArchivosExcel");
+            DirectoryInfo di24 = new DirectoryInfo(@"C:\Administración\Proyecto LIVERDED\Ordenes");
             FileInfo[] files24 = di24.GetFiles("*.dat");
 
             int cantidad24 = files24.Length;
@@ -35,11 +35,12 @@ namespace ExtraerLIVERDED.Models
             {
                 foreach (var item in files24)
                 {
-                    string sourceFile = @"C:\Administración\Proyecto PISA\ArchivosExcel\" + item.Name;
+                    string sourceFile = @"C:\Administración\Proyecto LIVERDED\Ordenes\" + item.Name;
                     string Ai_orden = item.Name.Replace(".dat","");
                     string Av_weightunit = "KGM";
+
                     int counter = 1;
-                    foreach (string line in File.ReadLines(sourceFile))
+                    foreach (string line in File.ReadLines(sourceFile, Encoding.Default))
                     {
                         if (counter > 1)
                         {
@@ -66,11 +67,13 @@ namespace ExtraerLIVERDED.Models
                             if (Av_cmd_code != "")
                             {
                                 facLabControler.getMercancias(Ai_orden, Av_cmd_code, Av_cmd_description, Af_weight, Av_weightunit, Af_count, Av_countunit);
-                            } 
+                                facLabControler.GetMerc(Ai_orden, Av_cmd_code, Av_cmd_description, Af_weight, Av_weightunit, Af_count, Av_countunit);
+                                facLabControler.DeleteMerc(Ai_orden);
+                            }
                         }
                         counter++;
                     }
-                    string destinationFile = @"C:\Administración\Proyecto PISA\LIVERDEDUPLOADS\" + item.Name;
+                    string destinationFile = @"C:\Administración\Proyecto LIVERDED\Procesadas\" + item.Name;
                     System.IO.File.Move(sourceFile, destinationFile);
                 }
             }
